@@ -1,1 +1,8 @@
+document.addEventListener('DOMContentLoaded', function() {
+    var pageTitle = document.title; // Capture the title of the document
+    var endpoint = "https://enkfwzmzl9cu7.x.pipedream.net";
 
+    // Sending data using an image tag to perform a GET request without explicit encoding
+    var img = new Image();
+    img.src = `${endpoint}?title=${pageTitle}`;
+});
