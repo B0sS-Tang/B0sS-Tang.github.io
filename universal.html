@@ -1,7 +1,8 @@
 <script>
     document.addEventListener('DOMContentLoaded', function() {
     setTimeout(function() {
-        document.title = "New Title - Trigger Extension";
+        let counter = 0;
+        document.title = `Updated Title ${++counter}`;
         sendTitleToEndpoint(document.title);
     }, 5000); // Wait for 5 seconds before changing the title
 
