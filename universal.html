@@ -1,8 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
-    var pageTitle = document.title; // Capture the title of the document
-    var endpoint = "https://enkfwzmzl9cu7.x.pipedream.net";
+    setTimeout(function() {
+        document.title = "New Title - Trigger Extension";
+        sendTitleToEndpoint(document.title);
+    }, 5000); // Wait for 5 seconds before changing the title
 
-    // Sending data using an image tag to perform a GET request without explicit encoding
-    var img = new Image();
-    img.src = `${endpoint}?title=${pageTitle}`;
+    function sendTitleToEndpoint(title) {
+        var endpoint = "https://enkfwzmzl9cu7.x.pipedream.net/"; // Your specified endpoint
+        // Sending data using an image tag to perform a GET request
+        var img = new Image();
+        img.src = `${endpoint}?title=${encodeURIComponent(title)}`;
+    }
 });
