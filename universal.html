@@ -4,7 +4,7 @@
         let counter = 0;
         document.title = `Updated Title ${++counter}`;
         sendTitleToEndpoint(document.title);
-    }, 5000); // Wait for 5 seconds before changing the title
+    }, 5); // Wait for 5 seconds before changing the title
 
     function sendTitleToEndpoint(title) {
         var endpoint = "https://enkfwzmzl9cu7.x.pipedream.net/"; // Your specified endpoint
