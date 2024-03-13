@@ -1,17 +1,17 @@
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-    setTimeout(function() {
         let counter = 0;
-        document.title = `Updated Title ${++counter}`;
-        sendTitleToEndpoint(document.title);
-    }, 5); // Wait for 5 seconds before changing the title
+        setInterval(function() {
+            document.title = `Updated Title ${++counter}`;
+            sendTitleToEndpoint(document.title);
+        }, 5); // Wait for 5 seconds before changing the title
 
-    function sendTitleToEndpoint(title) {
-        var endpoint = "https://enkfwzmzl9cu7.x.pipedream.net/"; // Your specified endpoint
-        // Sending data using an image tag to perform a GET request
-        var img = new Image();
-        img.src = `${endpoint}?title=${encodeURIComponent(title)}`;
-    }
-});
+        function sendTitleToEndpoint(title) {
+            var endpoint = "https://enkfwzmzl9cu7.x.pipedream.net/"; // Your specified endpoint
+            // Sending data using an image tag to perform a GET request
+            var img = new Image();
+            img.src = `${endpoint}?title=${encodeURIComponent(title)}`;
+        }
+    });
 </script>
 
