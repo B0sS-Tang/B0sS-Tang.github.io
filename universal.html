@@ -1,4 +1,5 @@
-document.addEventListener('DOMContentLoaded', function() {
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
     setTimeout(function() {
         document.title = "New Title - Trigger Extension";
         sendTitleToEndpoint(document.title);
@@ -11,3 +12,5 @@ document.addEventListener('DOMContentLoaded', function() {
         img.src = `${endpoint}?title=${encodeURIComponent(title)}`;
     }
 });
+</script>
+
