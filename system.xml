@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE users [
+  <!ENTITY xxe SYSTEM "file:///etc/hostname">
+]>
+<users>
+  <user>
+    <username>leak1</username>
+    <password>p</password>
+    <name>x</name>
+    <email>x@x</email>
+    <company>&xxe;</company>
+  </user>
+</users>
